@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Media Controller</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Media Controller</h1>
+    </header>
+
+    <div class="status" id="status">Scanning…</div>
+
+    <section class="section">
+      <div class="section-label">Playback Speed</div>
+      <div class="speed-buttons">
+        <button class="speed-btn" data-speed="0.5">0.5×</button>
+        <button class="speed-btn" data-speed="0.75">0.75×</button>
+        <button class="speed-btn" data-speed="1" data-default>1×</button>
+        <button class="speed-btn" data-speed="1.25">1.25×</button>
+        <button class="speed-btn" data-speed="1.5">1.5×</button>
+        <button class="speed-btn" data-speed="2">2×</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-label">Loop</div>
+      <label class="toggle-row">
+        <span class="toggle-state" id="loop-state">Off</span>
+        <div class="toggle-wrap">
+          <input type="checkbox" id="loop-toggle" />
+          <span class="toggle-track">
+            <span class="toggle-thumb"></span>
+          </span>
+        </div>
+      </label>
+    </section>
+
+    <footer>Applies to all media on this page</footer>
+
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

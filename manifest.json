@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Media Controller",
+  "version": "1.0",
+  "description": "Control playback speed and loop for any video or audio on the page",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background/service-worker.js"
+  }
+}
